@@ -4,7 +4,6 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 
 
-
 function App() {
   // LOGOOUT
   // const handleLogout = (e) => {
@@ -18,11 +17,6 @@ function App() {
   //     .catch(err => console.log({ err }));
 
   // }
-
-
-
-
-
 
 
   return (
@@ -39,7 +33,6 @@ function App() {
             <PrivateRoute path="/instructor" component={instructor}/> 
             
           */}
-
 
           <Route path="/signup">
             <SignUp/>
