@@ -10,7 +10,7 @@ import "./Login.css";
 
 const initialFormValues = {
     username: '',          // text inputs
-    password: 'x',
+    password: '',
 }
 
 const initialFormErrors = {
