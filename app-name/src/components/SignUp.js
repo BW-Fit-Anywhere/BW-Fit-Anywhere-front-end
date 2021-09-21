@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-// import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import * as yup from 'yup';
+import schema from "./formSchemaSignUp";
+import axios from 'axios';
 // import axiosWithAuth from '../utils/axiosWithAuth';
 // import { useHistory } from 'react-router';
 
@@ -8,32 +10,64 @@ const initialFormValues = {
   email:"",
   username: "",
   password: "",
-  role: ""
+  role_name: ""
+}
+
+const initialFormErrors = {
+  name: "",
+  email:"",
+  username: "",
+  password: "",
+  role_name: ""
 }
 
 const initialDisabled = true;
+const initialUsers = [];
 
 
 const SignUp = () => {
-  const [users, setUsers ] = useState({});
+  const [users, setUsers ] = useState(initialUsers);
   const [formValues, setFormValues] = useState(initialFormValues);
+  const [formErrors, setFormErrors] = useState(initialFormErrors);
   const [disabled, setDisabled] = useState(initialDisabled);
 
-  const {name, email, username, password, role} = users;
+  const {role_name} = users;
+
+  const postNewUser = newUser => {
+    axios.post('https://anywhere-fitness-main.herokuapp.com/api/auth/register', newUser)
+      .then(res => {
+        setUsers([res.data, ...users]);   // when submit is clicked and it goes to post new user, this line causes errors in console.
+        setFormValues(initialFormValues);
+      }).catch(err => {
+        console.error(err);
+        setFormValues(initialFormValues);
+      })
+  }
+
+  const validate = (name, value) => {
+    yup.reach(schema, name)
+      .validate(value)
+      .then(() => setFormErrors({ ...formErrors, [name]: '' }))
+      .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0] }))
+  }
+
+  useEffect(() => {
+    schema.isValid(formValues).then(valid => setDisabled(!valid))
+  }, [formValues])
 
   const inputChange = (name, value) => {
-    // validate(name, value);
+    validate(name, value);
     setFormValues({
       ...formValues,
       [name]: value
     })
-}
+  }
 
   const onChange = evt => {
     const { name, value } = evt.target;
     const valueToUse = value;
     inputChange(name, valueToUse);
-}
+  }
 
   const formSubmit = () => {
     const newUser = {
@@ -41,15 +75,16 @@ const SignUp = () => {
       email: formValues.email.trim(),
       username: formValues.username.trim(),
       password: formValues.password.trim(),
-      role: formValues.role.trim()
+      role_name: formValues.role_name.trim()
     }
-    console.log(newUser);
-}
+    postNewUser(newUser);   
+  }
 
   const onSubmit = event => {
     event.preventDefault()
     formSubmit()
-}
+  }
+
 
 
   return(
@@ -59,31 +94,31 @@ const SignUp = () => {
       </header>
       <form id="signup-form" onSubmit={onSubmit}>
         <div>
-          <p>Full Name: </p>
+          <label>Full Name: </label>
           <input id="name-input" name="name" type="text" onChange={onChange} /> 
         </div>
         <div>
-          <p>Email: </p>
+          <label>Email: </label>
           <input id="email-input" name="email" type="text" onChange={onChange} />
         </div>
         <div>
-          <p>Username: </p>
+          <label>Username: </label>
           <input id="username-input" name="username" type="text" onChange={onChange} />
         </div>
         <div>
-          <p>Password: </p>
+          <label>Password: </label>
           <input id="password-input" name="password" type="text" onChange={onChange} />
         </div>
         <div>
-          <p>Required!</p>
-          <select id='role-dropdown' name='role' value={role}>
-              <option value=''>Select your role</option>
+          <label>Select your role</label>
+          <select id='role-dropdown' name='role_name' value={role_name} onChange={onChange}>
+              <option value=''>Select a role</option>
               <option value='client'>Client</option>
-              <option value='instructor'>Instructor</option>
+              <option value='client'>Instructor</option>
           </select>
         </div>
         <div>
-          <button id="submit-button" type="submit" disabled={!disabled}>SUBMIT</button>
+          <button id="submit-button" type="submit" disabled={disabled}>SUBMIT</button>
         </div>
       </form>
     </div>
