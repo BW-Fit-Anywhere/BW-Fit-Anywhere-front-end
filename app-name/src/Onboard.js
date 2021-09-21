@@ -1,1 +1,0 @@
-// 3. client and instructor are both presented with the appropriate on-boarding walkthrough on first sign-in, with an option to skip it.
