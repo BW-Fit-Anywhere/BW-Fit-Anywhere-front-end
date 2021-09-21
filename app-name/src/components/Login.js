@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as yup from 'yup';
 import schema from './formSchema';
+import axios from 'axios';
 // import App  from '../App';
 import '../Login.css';
 
@@ -39,16 +40,16 @@ const Login = () => {
     })
   }
 
-  // const postNewFriend = newFriend => {
-  //   axios.post('http://buddies.com/api/friends', newFriend)
-  //     .then(res => {
-  //       setFriends([res.data, ...friends]);
-  //       setFormValues(initialFormValues);
-  //     }).catch(err => {
-  //       console.error(err);
-  //       setFormValues(initialFormValues);
-  //     })
-  // }
+  const postClient = newClient => {
+    axios.post('', newClient)
+      .then(res => {
+        setClients([res.data, ...clients]);
+        setFormValues(initialFormValues);
+      }).catch(err => {
+        console.error(err);
+        setFormValues(initialFormValues);
+      })
+  }
 
   const formSubmit = (e) => {
    e.preventDefault();
@@ -59,8 +60,6 @@ const Login = () => {
    return setClients(newClient)
   }
 
-
-
   useEffect(() => {
     schema.isValid(formValues).then(valid => setDisabled(!valid))
   }, [formValues])
@@ -70,17 +69,26 @@ const Login = () => {
       <header><h1>Login</h1></header>
       <form onSubmit={formSubmit}>
         <label>
-          <input/>
-          
+          <input
+            id="username"
+            value={formValues.username}
+            name="username"
+            type="text"
+            onChange={inputChange}
+          />
+         <br></br>
         </label>
         <label>
-        <input/>
+          <input
+            id="password"
+            value={formValues.password}
+            password="password"
+            type="password"
+            onChange={inputChange}
+          />
         </label>
-        values={formValues}
-        change={inputChange}
-        submit={formSubmit}
-        disabled={disabled}
-        errors={formErrors}
+        <br></br>
+        <button>Login</button>
       </form>
     
     </div>
