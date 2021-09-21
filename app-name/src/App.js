@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import Login from "./components/Login";
+// import Login.css from "./Login"
+import Login from "./components/Login";
 // import SignUp from "./components/SignUp";
 
 
@@ -15,8 +16,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
+
           Set It Off
         </a>
+        <Login />
       </header>
     </div>
   );
