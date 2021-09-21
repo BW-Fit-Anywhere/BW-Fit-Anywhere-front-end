@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import schema from './formSchema';
 import axios from 'axios';
 import * as yup from 'yup';
+import Login from "./components/Login";
 // import "./Login.css";
+
 
 const initialFormValues = {
   ///// TEXT INPUTS /////
@@ -23,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           <code></code> 
         </p>
