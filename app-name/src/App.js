@@ -1,54 +1,41 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import NavBar from "./components/NavBar";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import Footer from "./components/Footer";
 
 
 
 function App() {
-  // LOGOOUT
-  // const handleLogout = (e) => {
-  //   e.preventDefault();
-  //    axiosWithAuth()
-  //     .post("https://anywhere-fitness-main.herokuapp.com/logout")
-  //     .then((res) => {
-  //       localStorage.removeItem("token");
-  //       window.location.href = `$window.location.origin}/login`;
-  //     })
-  //     .catch(err => console.log({ err }));
-
-  // }
-
+ 
 
   return (
     <div>
       <Router>
-        <header>Fit Anywhere
-        {/* <a href="/login" onClick={handleLogout}>logout</a> */}
-        </header>
+        <NavBar/>
+        <div className="formContainer"> 
+          <Switch>
+            {/* define Private Routes:
+              <PrivateRoute path="/classes" component={classes}/> 
+              <PrivateRoute path="/client" component={client}/> 
+              <PrivateRoute path="/instructor" component={instructor}/> 
+              
+            */}
 
-        <Switch>
-          {/* define Private Routes:
-            <PrivateRoute path="/classes" component={classes}/> 
-            <PrivateRoute path="/client" component={client}/> 
-            <PrivateRoute path="/instructor" component={instructor}/> 
-            
-          */}
-
-          <Route path="/signup">
-            <SignUp/>
-          </Route>
-          <Route path="/login">
-            <Login/>
-          </Route>
-        </Switch>
+            <Route path="/signup">
+              <SignUp/>
+            </Route>
+            <Route path="/login">
+              <Login/>
+            </Route>
+          </Switch>
+        </div>
 
       </Router>
-      <footer>
-        <h4>Anywhere Fitness APP Copyright 2021</h4> 
-        <p>Build Team: Jeong Pak, Klove Adams, Leo Oládimú, Michael Guerrero, Priscila Monteiro, Rimsha Saleem.</p>
-      
-      </footer>
+
+      <Footer/>
+     
     </div>
     
   );
