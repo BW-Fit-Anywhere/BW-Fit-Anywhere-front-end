@@ -65,20 +65,19 @@ const Login = () => {
   }, [formValues])
 
   return (
-    <div className='container'>
-      <header><h1>Login</h1></header>
+    <div className='login-box'>
+      <h2>Login</h2>
       <form onSubmit={formSubmit}>
-        <label>
+        <div className='user-box'>
           <input
             id="username"
             value={formValues.username}
             name="username"
             type="text"
             onChange={inputChange}
-          />
-         <br></br>
-        </label>
-        <label>
+          /><label>Username</label>
+        </div>
+        <div className='user-box'>
           <input
             id="password"
             value={formValues.password}
@@ -86,13 +85,17 @@ const Login = () => {
             type="password"
             onChange={inputChange}
           />
-        </label>
-        <br></br>
-        <button>Login</button>
+          <label>Password</label>
+        </div>
+        <a href='button'>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
       </form>
-    
     </div>
   )
-
 }
 export default Login;
