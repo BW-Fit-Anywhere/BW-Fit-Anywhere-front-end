@@ -92,7 +92,7 @@ const Login = () => {
           <span></span>
           <span></span>
           <span></span>
-          Submit
+          Submit!
         </a>
       </form>
     </div>
