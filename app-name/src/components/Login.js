@@ -3,7 +3,7 @@ import * as yup from 'yup';
 import schema from './formSchema';
 import axios from 'axios';
 // import App  from '../App';
-// import '../Login.css';
+import '../Login.css';
 
 const initialFormValues = {
   username: '',  
@@ -92,7 +92,7 @@ const Login = () => {
           <span></span>
           <span></span>
           <span></span>
-          Submit
+          Submit!
         </a>
       </form>
     </div>
