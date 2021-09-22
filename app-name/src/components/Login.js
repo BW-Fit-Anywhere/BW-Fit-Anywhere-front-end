@@ -41,7 +41,7 @@ const Login = () => {
   }
 
   const postClient = newClient => {
-    axios.post('', newClient)
+    axios.post('https://anywhere-fitness-main.herokuapp.com/api/auth/register', newClient)
       .then(res => {
         setClients([res.data, ...clients]);
         setFormValues(initialFormValues);
@@ -52,12 +52,13 @@ const Login = () => {
   }
 
   const formSubmit = (e) => {
-   e.preventDefault();
-   const newClient = {
+    e.preventDefault();
+    const newClient = {
       username: formValues.username.trim(),
       password: formValues.password.trim()
     }
-   return setClients(newClient)
+    postClient(newClient)
+    return setClients(newClient)
   }
 
   useEffect(() => {
@@ -67,7 +68,7 @@ const Login = () => {
   return (
     <div className='login-box'>
       <h2>Login</h2>
-      <form onSubmit={formSubmit}>
+      <form id='login-form'onSubmit={formSubmit}>
         <div className='user-box'>
           <input
             id="username"
@@ -87,12 +88,14 @@ const Login = () => {
           />
           <label>Password</label>
         </div>
-        <a href='button'>
+        <a href='submit-button' type='submit' disabled={disabled}>
+        {/* <button id="submit-button" type="submit" disabled={disabled}> */}
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Submit!
+          {/* </button> */}
         </a>
       </form>
     </div>
