@@ -95,6 +95,7 @@ body {
               0 0 25px #67f403,
               0 0 50px #67f403,
               0 0 100px #67f403;
+              -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
 .login-box a span {
