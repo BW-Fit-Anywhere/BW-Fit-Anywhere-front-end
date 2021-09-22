@@ -107,7 +107,7 @@ const SignUp = () => {
         </div>
         <div>
           <label>Password: </label>
-          <input id="password-input" name="password" type="text" onChange={onChange} />
+          <input id="password-input" name="password" type="password" onChange={onChange} />
         </div>
         <div>
           <label>Select your role</label>
