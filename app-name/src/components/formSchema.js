@@ -11,8 +11,10 @@ const formSchema = yup.object().shape({
         .min(5, '5 Letters Or More')
         .trim()
         .required('☠︎ Valid Password Or Sudden Death ☠︎')
-        // .matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/, "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character" 
-        // ),
+        .matches(
+            /^.*(?=.{5,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
+            "Password must contain at least 5 characters, one uppercase, one number and one special case character"
+          ),
     // validationSchema: yup.object({
     //     password: yup.string().required('☠︎ Valid Password Or Sudden Death ☠︎'),
     //     passwordConfirmation: yup.string()
