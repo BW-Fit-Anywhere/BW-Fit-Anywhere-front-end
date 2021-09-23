@@ -3,14 +3,14 @@ import * as yup from 'yup';
 const formSchema = yup.object().shape({
     username: yup
         .string()
-        .min(5, '5 Letters Or Die!!!')
+        .min(5, '☠︎ ♂︎ At Least 5 Letters!! ♤ ☠︎')
         .trim()
-        .required('☠︎Type Your Name!☠︎'),
+        .required('☠︎ Type Your Name! ☠︎'),
     password: yup
         .string()
-        .min(5, '5 Letters Or Die!!!')
+        .min(5, '☠︎ 5 Letters Or Die!!! ☠︎')
         .trim()
-        .required('☠︎Valid Password Or Die!!!☠︎')
+        .required('☠︎ Valid Password Or Die!!! ☠︎')
     
 })
 
