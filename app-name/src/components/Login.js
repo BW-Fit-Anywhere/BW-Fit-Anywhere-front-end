@@ -28,7 +28,7 @@ const Login = () => {
   const validate = (name, value) => {
     yup.reach(schema, name)
       .validate(value)
-      .then((valid) => setFormErrors({ ...formErrors, [name]: '' }))
+      .then(() => setFormErrors({ ...formErrors, [name]: '' }))
       .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0] }))
   }
 console.log(formErrors);
@@ -77,18 +77,18 @@ console.log(formErrors);
             type="text"
             onChange={onChange}
             /><label>Username</label>
-            { formErrors.username.length > 0 ? <p style={{color: 'red'}}>{ formErrors.username }</p> : null }
+            { formErrors.username.length > 0 ? <p style={{color: 'orange'}}>{ formErrors.username }</p> : null }
         </div>
         <div className='user-box'>
           <input
             id="password"
             value={formValues.password}
             name="password" 
-            type="text"
+            type="password"
             onChange={onChange}
             />
           <label>Password</label>
-          { formErrors.password.length > 0 ? <p style={{color: 'red'}}>{ formErrors.password }</p> : null }
+          { formErrors.password.length > 0 ? <p style={{color: 'orange'}}>{ formErrors.password }</p> : null }
         </div>
         <a href='submit-button' type='submit' disabled={disabled}>
           <span></span>
