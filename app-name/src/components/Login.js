@@ -28,27 +28,26 @@ const Login = () => {
   const validate = (name, value) => {
     yup.reach(schema, name)
       .validate(value)
-      .then(() => setFormErrors({ ...formErrors, [name]: '' }))
+      .then((valid) => setFormErrors({ ...formErrors, [name]: '' }))
       .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0] }))
   }
-
-  const inputChange = (name, value) => {
-    validate(name, value);
-    setFormValues({
-      ...formValues,
-      [name]: value 
-    })
-  }
-
+console.log(formErrors);
   const postClient = newClient => {
     axios.post('https://anywhere-fitness-main.herokuapp.com/api/auth/register', newClient)
       .then(res => {
         setClients([res.data, ...clients]);
         setFormValues(initialFormValues);
-      }).catch(err => {
+      })
+      .catch(err => {
         console.error(err);
         setFormValues(initialFormValues);
       })
+  }
+
+  const onChange = evt => {
+    const { name, value } = evt.target;
+    validate(name, value)
+    setFormValues({ ...formValues, [name] : value});
   }
 
   const formSubmit = (e) => {
@@ -58,13 +57,14 @@ const Login = () => {
       password: formValues.password.trim()
     }
     postClient(newClient)
+    
     return setClients(newClient)
   }
-
+  
   useEffect(() => {
     schema.isValid(formValues).then(valid => setDisabled(!valid))
   }, [formValues])
-
+  
   return (
     <div className='login-box'>
       <h2>Login</h2>
@@ -75,27 +75,27 @@ const Login = () => {
             value={formValues.username}
             name="username"
             type="text"
-            onChange={inputChange}
-          /><label>Username</label>
+            onChange={onChange}
+            /><label>Username</label>
+            { formErrors.username.length > 0 ? <p style={{color: 'red'}}>{ formErrors.username }</p> : null }
         </div>
         <div className='user-box'>
           <input
             id="password"
             value={formValues.password}
-            password="password"
-            type="password"
-            onChange={inputChange}
-          />
+            name="password" 
+            type="text"
+            onChange={onChange}
+            />
           <label>Password</label>
+          { formErrors.password.length > 0 ? <p style={{color: 'red'}}>{ formErrors.password }</p> : null }
         </div>
         <a href='submit-button' type='submit' disabled={disabled}>
-        {/* <button id="submit-button" type="submit" disabled={disabled}> */}
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Submit!
-          {/* </button> */}
         </a>
       </form>
     </div>
