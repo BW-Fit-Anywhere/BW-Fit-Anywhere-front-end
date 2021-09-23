@@ -84,7 +84,7 @@ console.log(formErrors);
             id="password"
             value={formValues.password}
             name="password" 
-            type="text"
+            type="password"
             onChange={onChange}
             />
           <label>Password</label>
