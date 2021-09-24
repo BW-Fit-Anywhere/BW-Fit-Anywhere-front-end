@@ -4,6 +4,7 @@ import schema from './formSchema';
 import axios from 'axios';
 // import App  from '../App';
 import '../Login.css';
+// import { useFormik } from "formik";
 
 const initialFormValues = {
   username: '',  
@@ -31,13 +32,15 @@ const Login = () => {
       .then(() => setFormErrors({ ...formErrors, [name]: '' }))
       .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0] }))
   }
-console.log(formErrors);
+
+  console.log(formErrors);
+
   const postClient = newClient => {
-    axios.post('https://anywhere-fitness-main.herokuapp.com/api/auth/register', newClient)
+    axios.post('https://anywhere-fitness-main.herokuapp.com/api/auth/login', newClient)
       .then(res => {
         setClients([res.data, ...clients]);
         setFormValues(initialFormValues);
-      })
+      }) 
       .catch(err => {
         console.error(err);
         setFormValues(initialFormValues);
@@ -76,8 +79,9 @@ console.log(formErrors);
             name="username"
             type="text"
             onChange={onChange}
-            /><label>Username</label>
-            { formErrors.username.length > 0 ? <p style={{color: 'orange'}}>{ formErrors.username }</p> : null }
+          />
+          <label>Username</label>
+          { formErrors.username.length > 0 ? <p style={{color: 'orange'}}>{ formErrors.username }</p> : null }
         </div>
         <div className='user-box'>
           <input
@@ -86,7 +90,7 @@ console.log(formErrors);
             name="password" 
             type="password"
             onChange={onChange}
-            />
+          />
           <label>Password</label>
           { formErrors.password.length > 0 ? <p style={{color: 'orange'}}>{ formErrors.password }</p> : null }
         </div>
