@@ -4,6 +4,10 @@ body {
   /* background: linear-gradient(#141e30, #243b55); */
 }
 
+a [class='active'] {
+  text-decoration: none;
+}
+
 .login-box {
   position: absolute;
   top: 50%;
