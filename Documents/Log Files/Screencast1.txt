@@ -1,0 +1,342 @@
+locale:C
+Version:Feb  8 2021  13:56:41
+Public:2020-12-15 12:05:18
+==========================================
+2021-04-26 21:43:47
+==========================================
+Release
+==========================================
+2021-04-25 21:43:47.385 Loader[37229:1920364] en_US
+2021-04-25 21:43:47.385 Loader[37229:1920364] en
+2021-04-25 21:43:47.385 Loader[37229:1920364] US
+2021-04-25 21:43:47.385 Loader[37229:1920364] Loader
+2021-04-25 21:43:47.385 Loader[37229:1920364] {
+    "COMMAND_MODE" = unix2003;
+    HOME = "/Users/leooladimu";
+    LOGNAME = leooladimu;
+    PATH = "/usr/bin:/bin:/usr/sbin:/sbin";
+    SHELL = "/bin/zsh";
+    "SSH_AUTH_SOCK" = "/private/tmp/com.apple.launchd.ttCNuHyamF/Listeners";
+    TMPDIR = "/var/folders/mn/z9jdznyj6r1bg_wczvt91rv40000gn/T/";
+    USER = leooladimu;
+    "XPC_FLAGS" = 0x0;
+    "XPC_SERVICE_NAME" = 0;
+    "__CF_USER_TEXT_ENCODING" = "0x1F5:0x0:0x0";
+}
+Hardware:
+
+    Hardware Overview:
+
+      Model Name: MacBook Pro
+      Model Identifier: MacBookPro9,1
+      Processor Name: Quad-Core Intel Core i7
+      Processor Speed: 2.6 GHz
+      Number of Processors: 1
+      Total Number of Cores: 4
+      L2 Cache (per Core): 256 KB
+      L3 Cache: 6 MB
+      Hyper-Threading Technology: Enabled
+      Memory: 16 GB
+      Boot ROM Version: 421.0.0.0.0
+      SMC Version (system): 2.1f175
+      Serial Number (system): C2QJM02LF2J5
+      Hardware UUID: 4E235427-FE42-5AD8-887E-FA495ECB1104
+      Sudden Motion Sensor:
+          State: Enabled
+
+Graphics/Displays:
+
+    Intel HD Graphics 4000:
+
+      Chipset Model: Intel HD Graphics 4000
+      Type: GPU
+      Bus: Built-In
+      VRAM (Dynamic, Max): 1536 MB
+      Vendor: Intel
+      Device ID: 0x0166
+      Revision ID: 0x0009
+      Automatic Graphics Switching: Supported
+      gMux Version: 1.9.23
+      Metal: Supported, feature set macOS GPUFamily1 v4
+      Displays:
+        Color LCD:
+          Display Type: LCD
+          Resolution: 1440 x 900 (Widescreen eXtended Graphics Array Plus)
+          UI Looks like: 1440 x 900
+          Framebuffer Depth: 24-Bit Color (ARGB8888)
+          Main Display: Yes
+          Mirror: Off
+          Online: Yes
+          Automatically Adjust Brightness: No
+          Connection Type: Internal
+
+    NVIDIA GeForce GT 650M:
+
+      Chipset Model: NVIDIA GeForce GT 650M
+      Type: GPU
+      Bus: PCIe
+      PCIe Lane Width: x8
+      VRAM (Total): 1 GB
+      Vendor: NVIDIA (0x10de)
+      Device ID: 0x0fd5
+      Revision ID: 0x00a2
+      ROM Revision: 3682
+      Automatic Graphics Switching: Supported
+      gMux Version: 1.9.23
+      Metal: Supported, feature set macOS GPUFamily1 v4
+
+2021-04-25 21:43:47.853 Loader[37229:1920364] Version 10.15.7 (Build 19H524)
+2021-04-25 21:43:47.853 Loader[37229:1920364] Processor count=8
+2021-04-25 21:43:47.853 Loader[37229:1920364] Physical memory=16GB
+2021-04-25 21:43:48.850 Loader[37229:1920364] Render(0):NVIDIA GeForce GT 650M OpenGL Engine
+2021-04-25 21:43:48.850 Loader[37229:1920364] Render(1):Apple Software Renderer
+2021-04-25 21:43:48.885 Loader[37229:1920364] X64_64
+2021-04-25 21:43:48.895 Loader[37229:1920364]  [Msg] NSOpenGL version: 1.2
+2021-04-25 21:43:48.895 Loader[37229:1920364]  [Msg] CGL version: 1.2
+2021-04-25 21:43:48.895 Loader[37229:1920364]  [Msg] Running on a NVIDIA GeForce GT 650M OpenGL Engine from NVIDIA Corporation
+2021-04-25 21:43:48.895 Loader[37229:1920364]  [Msg] OpenGL version: 4.1 NVIDIA-14.0.32 355.11.11.10.10.143
+2021-04-25 21:43:48.895 Loader[37229:1920364]  [Msg] Shading language: 4.10
+2021-04-25 21:43:49.002 Loader[37229:1920364] {
+    CodecName = "24-bit RGB";
+    CodecType = 24;
+    DisplayName = "24-bit RGB";
+    EncoderID = "com.apple.videotoolbox.videoencoder.24rgb";
+    EncoderName = "Apple 24-bit RGB";
+    PerformanceRating = 0;
+}
+2021-04-25 21:43:49.002 Loader[37229:1920364] {
+    CodecName = "32-bit ARGB";
+    CodecType = 32;
+    DisplayName = "32-bit ARGB";
+    EncoderID = "com.apple.videotoolbox.videoencoder.32argb";
+    EncoderName = "Apple 32-bit ARGB";
+    PerformanceRating = 0;
+}
+2021-04-25 21:43:49.002 Loader[37229:1920364] {
+    CodecName = "Apple ProRes 422";
+    CodecType = 1634755438;
+    DisplayName = "Apple ProRes 422";
+    EncoderID = "com.apple.videotoolbox.videoencoder.prores-422";
+    EncoderName = "Apple ProRes 422";
+}
+2021-04-25 21:43:49.002 Loader[37229:1920364] {
+    CodecName = "Apple ProRes 422 HQ";
+    CodecType = 1634755432;
+    DisplayName = "Apple ProRes 422 HQ";
+    EncoderID = "com.apple.videotoolbox.videoencoder.prores-422hq";
+    EncoderName = "Apple ProRes 422 HQ";
+}
+2021-04-25 21:43:49.002 Loader[37229:1920364] {
+    CodecName = "Apple ProRes 422 LT";
+    CodecType = 1634755443;
+    DisplayName = "Apple ProRes 422 LT";
+    EncoderID = "com.apple.videotoolbox.videoencoder.prores-422lt";
+    EncoderName = "Apple ProRes 422 LT";
+}
+2021-04-25 21:43:49.002 Loader[37229:1920364] {
+    CodecName = "Apple ProRes 422 Proxy";
+    CodecType = 1634755439;
+    DisplayName = "Apple ProRes 422 Proxy";
+    EncoderID = "com.apple.videotoolbox.videoencoder.prores-422proxy";
+    EncoderName = "Apple ProRes 422 Proxy";
+}
+2021-04-25 21:43:49.002 Loader[37229:1920364] {
+    CodecName = "Apple ProRes 4444";
+    CodecType = 1634743400;
+    DisplayName = "Apple ProRes 4444";
+    EncoderID = "com.apple.videotoolbox.videoencoder.prores-4444";
+    EncoderName = "Apple ProRes 4444";
+}
+2021-04-25 21:43:49.002 Loader[37229:1920364] {
+    CodecName = "Apple ProRes 4444 XQ";
+    CodecType = 1634743416;
+    DisplayName = "Apple ProRes 4444 XQ";
+    EncoderID = "com.apple.videotoolbox.videoencoder.prores-4444xq";
+    EncoderName = "Apple ProRes 4444 XQ";
+}
+2021-04-25 21:43:49.002 Loader[37229:1920364] {
+    CodecName = "H.263";
+    CodecType = 1748121139;
+    DisplayName = "H.263";
+    EncoderID = "com.apple.videotoolbox.videoencoder.h263";
+    EncoderName = "Apple H.263";
+    PerformanceRating = "-10";
+}
+2021-04-25 21:43:49.002 Loader[37229:1920364] {
+    CodecName = "H.264";
+    CodecType = 1635148593;
+    DisplayName = "Apple H.264 (HW)";
+    EncoderID = "com.apple.videotoolbox.videoencoder.h264.gva";
+    EncoderName = "Apple H.264 (HW)";
+    IsHardwareAccelerated = 1;
+    PerformanceRating = 400;
+}
+2021-04-25 21:43:49.003 Loader[37229:1920364] {
+    CodecName = "H.264";
+    CodecType = 1635148593;
+    DisplayName = "Apple H.264 (SW)";
+    EncoderID = "com.apple.videotoolbox.videoencoder.h264";
+    EncoderName = "Apple H.264 (SW)";
+    PerformanceRating = 200;
+}
+2021-04-25 21:43:49.003 Loader[37229:1920364] {
+    CodecName = HEVC;
+    CodecType = 1752589105;
+    DisplayName = HEVC;
+    EncoderID = "com.apple.videotoolbox.videoencoder.hevc.vcp";
+    EncoderName = "Apple HEVC (SW)";
+    PerformanceRating = 0;
+    QualityRating = 100;
+    SupportedSelectionProperties =     {
+        ProfileLevel =         (
+            "HEVC_Main_AutoLevel",
+            "HEVC_Main10_AutoLevel"
+        );
+    };
+}
+2021-04-25 21:43:49.003 Loader[37229:1920364] {
+    CodecName = JPEG;
+    CodecType = 1785750887;
+    DisplayName = JPEG;
+    EncoderID = "com.apple.videotoolbox.videoencoder.jpeg";
+    EncoderName = "Apple JPEG";
+    PerformanceRating = "-10";
+}
+2021-04-25 21:43:49.003 Loader[37229:1920364] {
+    CodecName = "Muxed Alpha";
+    CodecType = 1836415073;
+    DisplayName = "Apple Muxed Alpha";
+    EncoderID = "com.apple.videotoolbox.videoencoder.hevc-with-alpha:com.apple.videotoolbox.videoencoder.hevc.vcp";
+    EncoderName = "Apple Muxed Alpha";
+    PerformanceRating = 0;
+    QualityRating = 100;
+    SupportedSelectionProperties =     {
+        ProfileLevel =         (
+            "HEVC_Main_AutoLevel",
+            "HEVC_Main10_AutoLevel"
+        );
+    };
+}
+2021-04-25 21:43:49.003 Loader[37229:1920364] {
+    CodecName = "Muxed Alpha";
+    CodecType = 1836415073;
+    DisplayName = "Apple Muxed Alpha";
+    EncoderID = "com.apple.videotoolbox.videoencoder.hevc-with-alpha:com.apple.videotoolbox.videoencoder.hevc.gva";
+    EncoderName = "Apple Muxed Alpha";
+    IsHardwareAccelerated = 1;
+}
+2021-04-25 21:43:49.003 Loader[37229:1920364]  [Msg] *************************************
+2021-04-25 21:43:49.003 Loader[37229:1920364]  [Msg] H264: {
+    CodecName = "H.264";
+    CodecType = 1635148593;
+    DisplayName = "Apple H.264 (HW)";
+    EncoderID = "com.apple.videotoolbox.videoencoder.h264.gva";
+    EncoderName = "Apple H.264 (HW)";
+    IsHardwareAccelerated = 1;
+    PerformanceRating = 400;
+}
+2021-04-25 21:43:49.003 Loader[37229:1920364]  [Msg] HEVC: Unsupport
+2021-04-25 21:43:49.003 Loader[37229:1920364]  [Msg] AppleProRes422: {
+    CodecName = "Apple ProRes 422";
+    CodecType = 1634755438;
+    DisplayName = "Apple ProRes 422";
+    EncoderID = "com.apple.videotoolbox.videoencoder.prores-422";
+    EncoderName = "Apple ProRes 422";
+}
+2021-04-25 21:43:49.003 Loader[37229:1920364]  [Msg] AppleProRes4444: {
+    CodecName = "Apple ProRes 4444";
+    CodecType = 1634743400;
+    DisplayName = "Apple ProRes 4444";
+    EncoderID = "com.apple.videotoolbox.videoencoder.prores-4444";
+    EncoderName = "Apple ProRes 4444";
+}
+2021-04-25 21:43:49.003 Loader[37229:1920364]  [Msg] *************************************
+2021-04-25 21:43:49.003 Loader[37229:1920364]  [Msg] Display0: 0x0-1440x900, Width=1440, Height=900
+2021-04-25 21:43:49.003 Loader[37229:1920364]  [Msg] ===============DISPLAY===================
+2021-04-25 21:43:49.003 Loader[37229:1920364] {
+    NSDeviceBitsPerSample = 8;
+    NSDeviceColorSpaceName = NSCalibratedRGBColorSpace;
+    NSDeviceIsScreen = YES;
+    NSDeviceResolution = "NSSize: {72, 72}";
+    NSDeviceSize = "NSSize: {1440, 900}";
+    NSScreenNumber = 69675270;
+}
+2021-04-25 21:43:49.004 Loader[37229:1920364] <CGDisplayMode 0x7fb24ed1bf10> [{
+    BitsPerPixel = 32;
+    BitsPerSample = 8;
+    DepthFormat = 4;
+    Height = 900;
+    IODisplayModeID = "-2147479551";
+    IOFlags = 33554439;
+    Mode = 0;
+    PixelEncoding = "--------RRRRRRRRGGGGGGGGBBBBBBBB";
+    RefreshRate = 0;
+    SamplesPerPixel = 3;
+    UsableForDesktopGUI = 1;
+    Width = 1440;
+    kCGDisplayBytesPerRow = 5760;
+    kCGDisplayHorizontalResolution = 111;
+    kCGDisplayModeIsInterlaced = 0;
+    kCGDisplayModeIsSafeForHardware = 1;
+    kCGDisplayModeIsStretched = 0;
+    kCGDisplayModeIsTelevisionOutput = 0;
+    kCGDisplayModeIsUnavailable = 0;
+    kCGDisplayModeSuitableForUI = 1;
+    kCGDisplayPixelsHigh = 900;
+    kCGDisplayPixelsWide = 1440;
+    kCGDisplayResolution = 1;
+    kCGDisplayVerticalResolution = 110;
+}] 
+2021-04-25 21:43:49.004 Loader[37229:1920364]  [Msg] ==========================================
+2021-04-25 21:43:49.010 Loader[37229:1920364]  [Msg] ===============SCREENS===================
+2021-04-25 21:43:49.011 Loader[37229:1920364]  [Msg] 1, Name=Built-in Display, Display={0x0-1440x900}(1440x900), Screen={0x0-1440x900}(1440x900)
+2021-04-25 21:43:49.011 Loader[37229:1920364]  [Msg] ==========================================
+2021-04-25 21:43:49.011 Loader[37229:1920364]  [Msg] Use Display 0
+Display={0x0-1440x900}(1440x900)
+Screen={0x0-1440x900}(1440x900)
+ScaleFactor=1
+Display resolution=1440x900
+2021-04-25 21:43:49.156 Loader[37229:1920364]  [Msg] ===============VIDEO CAPTURES===================
+2021-04-25 21:43:49.156 Loader[37229:1920364]  [Msg] 1, Name=[FaceTime HD Camera (Built-in)], Device UID=0x1a11000005ac8509
+2021-04-25 21:43:49.156 Loader[37229:1920364]  [Msg] =============================================
+2021-04-25 21:43:49.156 Loader[37229:1920364]  [Msg] ---------------------Audio devices---------------------
+2021-04-25 21:43:49.156 Loader[37229:1920364]  [Msg] Devices Size=16(4)
+2021-04-25 21:43:49.157 Loader[37229:1920364]  [Msg] 1: 69=[Screen Recorder Audio Driver] [Render], UID=[APAudioDriver_UID] Transport type=Virtual
+2021-04-25 21:43:49.157 Loader[37229:1920364]  [Msg] 2: 62=[Built-in Microphone] [Capture], UID=[AppleHDAEngineInput:1B,0,1,0:1] Transport type=BuiltIn
+2021-04-25 21:43:49.157 Loader[37229:1920364]  [Msg] 3: 52=[Built-in Input] [Capture], UID=[AppleHDAEngineInput:1B,0,1,1:2] Transport type=BuiltIn
+2021-04-25 21:43:49.158 Loader[37229:1920364]  [Msg] 4: 42=[Built-in Output] [Render], UID=[AppleHDAEngineOutput:1B,0,1,2:0] Transport type=BuiltIn
+2021-04-25 21:43:49.158 Loader[37229:1920364]  [Msg] ---------------------Audio devices---------------------
+2021-04-25 21:43:49.159 Loader[37229:1920364]  [Msg] Devices Size=16(4)
+2021-04-25 21:43:49.160 Loader[37229:1920364]  [Msg] Use Display 0
+Display={0x0-1440x900}(1440x900)
+Screen={0x0-1440x900}(1440x900)
+ScaleFactor=1
+Display resolution=1440x900
+2021-04-25 21:43:49.183 Loader[37229:1920364]  [Msg] Use Display 0
+Display={0x0-1440x900}(1440x900)
+Screen={0x0-1440x900}(1440x900)
+ScaleFactor=1
+Display resolution=1440x900
+2021-04-25 21:43:49.183 Loader[37229:1920364]  [Msg] Devices Size=16(4)
+2021-04-25 21:44:02.936 Loader[37229:1920364]  [Msg] Check virtual audio device ...
+2021-04-25 21:44:02.936 Loader[37229:1920364]  [Msg] Audio driver version=200
+2021-04-25 21:44:02.937 Loader[37229:1920364]  [Msg] Current render device: AppleHDAEngineOutput:1B,0,1,2:0
+2021-04-25 21:44:02.937 Loader[37229:1920364]  [Msg] Check virtual audio device ...
+2021-04-25 21:44:02.937 Loader[37229:1920364]  [Msg] Audio driver version=200
+2021-04-25 21:44:02.937 Loader[37229:1920364]  [Msg] Current render device: AppleHDAEngineOutput:1B,0,1,2:0
+2021-04-25 21:44:02.937 Loader[37229:1920364]  [Msg] Check virtual audio device ...
+2021-04-25 21:44:02.937 Loader[37229:1920364]  [Msg] Audio driver version=200
+2021-04-25 21:44:02.938 Loader[37229:1920364]  [Msg] Current render device: AppleHDAEngineOutput:1B,0,1,2:0
+2021-04-25 21:44:07.111 Loader[37229:1920364]  [Msg] AVMediaType:soun, is granted
+2021-04-25 21:44:07.111 Loader[37229:1920364]  [Msg] AVMediaType:soun, is granted
+2021-04-25 21:44:15.622 Loader[37229:1920364]  [Msg] RequestPermissionScreenCapture ...
+2021-04-25 21:44:15.643 Loader[37229:1920364]  [Msg] RequestPermissionScreenCapture=0
+2021-04-25 21:44:20.425 Loader[37229:1920364]  [Msg] RequestPermissionScreenCapture ...
+2021-04-25 21:44:20.430 Loader[37229:1920364]  [Msg] RequestPermissionScreenCapture=0
+2021-04-25 21:44:20.449 Loader[37229:1920364]  [Msg] Delete aduio temporary file...
+2021-04-25 21:44:20.449 Loader[37229:1920364] Uninitialize screencast core.
+QCssParser::parseHexColor: Unknown color name '#black'
+2021-04-25 21:44:21.272 Loader[37238:1920880]  [Msg] Devices Size=16(4)
+2021-04-25 21:44:21.504 Loader[37238:1920880]  [Msg] Devices Size=16(4)
+2021-04-25 21:44:21.636 Loader[37238:1920880] Color LCD colorspace
+2021-04-25 21:44:21.636 Loader[37238:1920880] sRGB IEC61966-2.1 colorspace
